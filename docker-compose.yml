@@ -1,17 +1,15 @@
-version: '3.1'
-
+version: '3'
 services:
-
-  db:
-    image: mysql:5.7
-    container_name: mysql
-    restart: always
+  postgres:
+    image: postgres:13
     environment:
-      MYSQL_DATABASE: application
-      MYSQL_USER: miautcc
-      MYSQL_PASSWORD: 123
-      MYSQL_ROOT_PASSWORD: 123
+      - POSTGRES_DB=application
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 3306:3306
+      - "5432:5432"
     volumes:
-      - ./assets/data:/docker-entrypoint-initdb.d
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
