@@ -24,4 +24,18 @@ public class Animal {
     private String situation;
     private String behavior;
     private String observation;
+    private String image;
+
+    public Animal(AnimalRequestDTO data) {
+        this.name = data.name();
+        this.age = data.age();
+        this.gender = data.gender();
+        this.breed = data.breed();
+        this.coatColor = data.coatColor();
+        this.coatLength = data.coatLength();
+        this.situation = data.situation();
+        this.behavior = data.behavior();
+        this.observation = data.observation();
+        this.image = data.image();
+    }
 }
