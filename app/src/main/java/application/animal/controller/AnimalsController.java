@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,11 +42,14 @@ public class AnimalsController {
         return animalList;
     }
 
-    @DeleteMapping
-    public void deleteAnimal(@RequestBody Long id) {
-        Optional<Animal> animal = animalrepository.findById(id);
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
         animalrepository.deleteById(id);
-        return;
     }
+
+    // @PutMapping("/{id}")
+    // public void updateUser(@PathVariable Long id, @RequestBody Animal animal) {
+    //     animalrepository.
+    // }
 
 }
