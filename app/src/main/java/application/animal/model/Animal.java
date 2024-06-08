@@ -1,5 +1,6 @@
-package application.animal;
+package application.animal.model;
 
+import application.animal.dto.AnimalRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

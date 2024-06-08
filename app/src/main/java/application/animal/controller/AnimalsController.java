@@ -1,9 +1,9 @@
 package application.animal.controller;
 
-import application.animal.Animal;
-import application.animal.AnimalResponseDTO;
-import application.animal.AnimalRepository;
-import application.animal.AnimalRequestDTO;
+import application.animal.model.Animal;
+import application.animal.repository.AnimalRepository;
+import application.animal.dto.AnimalRequestDTO;
+import application.animal.dto.AnimalResponseDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
