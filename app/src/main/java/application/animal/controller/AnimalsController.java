@@ -26,7 +26,7 @@ public class AnimalsController {
     private AnimalRepository animalrepository;
     
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping
+    @PostMapping("/create")
     public void saveAnimal(@RequestBody AnimalRequestDTO data) {
         Animal animalData = new Animal(data);
         
@@ -36,13 +36,13 @@ public class AnimalsController {
     }
         
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping
+    @GetMapping("/list")
     public List<AnimalResponseDTO> getAll() {
         List<AnimalResponseDTO> animalList = animalrepository.findAll().stream().map(AnimalResponseDTO::new).toList();
         return animalList;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable Long id) {
         animalrepository.deleteById(id);
     }
