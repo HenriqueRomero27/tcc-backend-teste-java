@@ -43,7 +43,7 @@ public class AnimalsController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public void deleteAnimal (@PathVariable Long id) {
         animalrepository.deleteById(id);
     }
 
