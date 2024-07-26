@@ -2,10 +2,7 @@ package application.adoptionHouse.model;
 
 import application.adoptionHouse.dto.AdoptionHouseRequestDTO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Table(name = "adoption-houses")
 @Entity(name = "adoption-houses")

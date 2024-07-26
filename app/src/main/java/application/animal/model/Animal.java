@@ -2,10 +2,7 @@ package application.animal.model;
 
 import application.animal.dto.AnimalRequestDTO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Table(name = "animals")
 @Entity(name = "animals")
