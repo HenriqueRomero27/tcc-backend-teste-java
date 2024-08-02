@@ -26,17 +26,18 @@ public class AnimalsController {
     private AnimalRepository animalrepository;
     
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/create")
+    @PostMapping
     public void saveAnimal(@RequestBody AnimalRequestDTO data) {
         Animal animalData = new Animal(data);
         
         animalrepository.save(animalData);
+        System.out.print(animalData);
         return;
         
     }
         
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/list")
+    @GetMapping
     public List<AnimalResponseDTO> getAll() {
         List<AnimalResponseDTO> animalList = animalrepository.findAll().stream().map(AnimalResponseDTO::new).toList();
         return animalList;
