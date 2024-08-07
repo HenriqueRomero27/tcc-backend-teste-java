@@ -18,7 +18,7 @@ import application.adoptionRequest.repository.AdoptionRequestRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/adoption-houses")
+@RequestMapping("/adoption-requests")
 public class AdoptionRequestController {
     @Autowired
     private AdoptionRequestRepository adoptionRequestRepositoty;
