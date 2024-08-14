@@ -29,11 +29,12 @@ public class AdoptionRequest {
     @JoinColumn(name = "adoption-house_id")
     private AdoptionHouse adoptionHouse;
 
-
+    private String message;
 
     public AdoptionRequest(AdoptionRequestDTO data) {
         this.user = data.user();
         this.animal = data.animal();
         this.adoptionHouse = data.adoptionHouse();
+        this.message = data.message();
     }
 }
