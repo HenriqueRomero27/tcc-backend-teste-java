@@ -23,7 +23,7 @@ public class AdoptionHouseController {
     private AdoptionHouseRepository adoptionHouseRepositoty;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/create") 
+    @PostMapping("/") 
     public void saveAdoptionHouse(@RequestBody AdoptionHouseRequestDTO data) {
         AdoptionHouse adoptionHouseData = new AdoptionHouse(data);
 
@@ -32,7 +32,7 @@ public class AdoptionHouseController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/list")
+    @GetMapping("/")
     public List<AdoptionHouseResponseDTO> getAll() {
         List<AdoptionHouseResponseDTO> adoptionHouseList = adoptionHouseRepositoty.findAll().stream().map(AdoptionHouseResponseDTO::new).toList();
         return adoptionHouseList;
